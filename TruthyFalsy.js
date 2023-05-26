@@ -16,6 +16,7 @@ let r7 = document.getElementById("r7");
 let r8 = document.getElementById("r8");
 let r9 = document.getElementById("r9");
 let r10 = document.getElementById("r10");
+
 r1.innerText = isTruthyOrFalsy(true);
 r2.innerText = isTruthyOrFalsy(false);
 r3.innerText = isTruthyOrFalsy(0);
@@ -26,6 +27,7 @@ r7.innerText = isTruthyOrFalsy({});
 r8.innerText = isTruthyOrFalsy({property:"value"});
 r9.innerText = isTruthyOrFalsy(null);
 r10.innerText = isTruthyOrFalsy(undefined);
+
 
 /**
  * TODO: from what you know about type coercion, putting a variable inside of an if statement should coerce into
@@ -44,3 +46,7 @@ function isTruthyOrFalsy(value){
 
     }
 }
+
+
+/* OPTIONAL PRACTICE: If you want more practice later, try discovering the truthy/falsey nature of negative numbers, NaN, arrays,
+    empty arrays. */
