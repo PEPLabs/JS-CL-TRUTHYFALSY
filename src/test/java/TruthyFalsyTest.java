@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class TruthyFalsyTest {
 
@@ -25,8 +27,10 @@ public class TruthyFalsyTest {
         String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
-        ChromeOptions options = new ChromeOptions();
+        // ChromeOptions options = new ChromeOptions();
+        EdgeOptions options = new EdgeOptions();
         options.addArguments("headless");
+        //  webDriver = new ChromeDriver(options);
         webDriver = new EdgeDriver(options);
 
         // Open the HTML file
