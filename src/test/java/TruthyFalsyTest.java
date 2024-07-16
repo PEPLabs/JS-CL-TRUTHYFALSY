@@ -18,7 +18,7 @@ public class TruthyFalsyTest {
     @Before
     public void setUp() {
         // Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
+        System.setProperty("webdriver.edge.driver", "driver/msedgedriver");//linux_64
 
         // Get file
         File file = new File("TruthyFalsy.html");
@@ -27,7 +27,7 @@ public class TruthyFalsyTest {
         // Create a new ChromeDriver instance
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
-        webDriver = new ChromeDriver(options);
+        webDriver = new EdgeDriver(options);
 
         // Open the HTML file
         webDriver.get(path);
