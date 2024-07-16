@@ -2,8 +2,8 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 
-import org.junit.After;
-import org.junit.Before;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +15,7 @@ public class SeleniumTest {
 
     private WebDriver webDriver;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         // Set up ChromeDriver path
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
@@ -95,7 +95,7 @@ public class SeleniumTest {
 
     
 
-    @After
+    @AfterEach
     public void tearDown() {
         // Close the browser
         webDriver.quit();
