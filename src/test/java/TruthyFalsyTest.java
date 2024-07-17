@@ -20,19 +20,19 @@ public class TruthyFalsyTest {
     @Before
     public void setUp() {
         // Set up ChromeDriver path
-        //  System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
-        System.setProperty("webdriver.edge.driver", "driver/msedgedriver");//linux_64
+          System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
+       // System.setProperty("webdriver.edge.driver", "driver/msedgedriver");//linux_64
 
         // Get file
         File file = new File("TruthyFalsy.html");
         String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
-        // ChromeOptions options = new ChromeOptions();
-        EdgeOptions options = new EdgeOptions();
+         ChromeOptions options = new ChromeOptions();
+        //EdgeOptions options = new EdgeOptions();
         options.addArguments("headless");
-        //  webDriver = new ChromeDriver(options);
-        webDriver = new EdgeDriver(options);
+          webDriver = new ChromeDriver(options);
+        // webDriver = new EdgeDriver(options);
 
         // Open the HTML file
         webDriver.get(path);
