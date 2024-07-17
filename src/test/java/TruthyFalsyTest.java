@@ -10,8 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+
 
 public class TruthyFalsyTest {
 
@@ -21,7 +20,7 @@ public class TruthyFalsyTest {
     public void setUp() {
         // Set up ChromeDriver path
           System.setProperty("webdriver.chrome.driver", "driver/chromedriver");//linux_64
-       // System.setProperty("webdriver.edge.driver", "driver/msedgedriver");//linux_64
+       
 
         // Get file
         File file = new File("TruthyFalsy.html");
@@ -29,10 +28,10 @@ public class TruthyFalsyTest {
 
         // Create a new ChromeDriver instance
          ChromeOptions options = new ChromeOptions();
-        //EdgeOptions options = new EdgeOptions();
+        
         options.addArguments("headless");
           webDriver = new ChromeDriver(options);
-        // webDriver = new EdgeDriver(options);
+       
 
         // Open the HTML file
         webDriver.get(path);
