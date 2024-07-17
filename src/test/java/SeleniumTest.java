@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 
-public class TruthyFalsyTest {
+public class SeleniumTest {
 
     private WebDriver webDriver;
 
