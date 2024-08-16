@@ -23,7 +23,7 @@ public class SeleniumTest {
        
 
         // Get file
-        File file = new File("TruthyFalsy.html");
+        File file = new File("src/main/TruthyFalsy.html");
         String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
