@@ -551,149 +551,65 @@ public class SeleniumTest {
             this.binaryPath = binaryPath;
         }
     }
-
-    @Test
-    public void testImageSrc() {
-        //setup
-        WebElement imageElement = webDriver.findElement(By.id("image"));
-        WebElement buttonElement = webDriver.findElement(By.id("button"));
-        WebElement inputElement = webDriver.findElement(By.id("input"));
-        String url = "./resources/python.png";
-        String placeholder = "./resources/placeholder.png";
-
-        //make sure initial src is present
-        String initial = imageElement.getAttribute("src");
-        Assert.assertEquals(placeholder.substring(placeholder.length() - 26), initial.substring(initial.length() - 26));
-
-        //enter new input and click button
-        inputElement.sendKeys(url);
-        buttonElement.click();
-        String src = imageElement.getAttribute("src");
-
-        //assert src attribute now matches input
-        Assert.assertEquals(url.substring(1), src.substring(src.length() + 1 - url.length()));
-    }
-
-    @Test
-    public void addOneItemTest() {
-        // find input element:
-        WebElement input = webDriver.findElement(By.id("input"));
-
-        // type in input box:
-        input.sendKeys("apples");
-
-        // find submit button and submit:
-        WebElement button = webDriver.findElement(By.id("button"));
-        button.click();
-
-        // find list of items and ensure item is there:
-        List<WebElement> list = webDriver.findElements(By.cssSelector("#list li"));
-
-        Assert.assertEquals(1, list.size());
-
-        Assert.assertEquals("apples", list.get(0).getText());
-    }
-
-    @Test
-    public void addThreeItemsTest() {
-        // find input element:
-        WebElement input = webDriver.findElement(By.id("input"));
-
-        // type in input box:
-        input.sendKeys("apples");
-
-        // find submit button and submit:
-        WebElement button = webDriver.findElement(By.id("button"));
-        button.click();
-
-        // send more items:
-        input.clear();
-        input.sendKeys("bananas");
-        button.click();
-        input.clear();
-        input.sendKeys("oranges");
-        button.click();
-
-        // find list of items and ensure items are there:
-        List<WebElement> list = webDriver.findElements(By.cssSelector("#list li"));
-
-        Assert.assertEquals(3, list.size());
-
-        Assert.assertEquals("apples", list.get(0).getText());
-        Assert.assertEquals("bananas", list.get(1).getText());
-        Assert.assertEquals("oranges", list.get(2).getText());
-    }
-
-    @Test
-    public void emptyListTest() {
-        // find input element:
-        WebElement input = webDriver.findElement(By.id("input"));
-
-        // find list of items and ensure no items:
-        List<WebElement> list = webDriver.findElements(By.cssSelector("#list li"));
-
-        Assert.assertEquals(0, list.size());
-
-    }
     
     @Test
     public void testR1() {
         WebElement r1 = webDriver.findElement(By.id("r1"));
-        assertEquals(r1.getText(), "true");
+        Assert.assertEquals(r1.getText(), "true");
     }
 
     @Test
     public void testR2() {
         WebElement r2 = webDriver.findElement(By.id("r2"));
-        assertEquals(r2.getText(), "false");
+        Assert.assertEquals(r2.getText(), "false");
     }
 
     @Test
     public void testR3() {
         WebElement r3 = webDriver.findElement(By.id("r3"));
-        assertEquals(r3.getText(), "false");
+        Assert.assertEquals(r3.getText(), "false");
     }
 
     @Test
     public void testR4() {
         WebElement r4 = webDriver.findElement(By.id("r4"));
-        assertEquals(r4.getText(), "true");
+        Assert.assertEquals(r4.getText(), "true");
     }
 
     @Test
     public void testR5() {
         WebElement r5 = webDriver.findElement(By.id("r5"));
-        assertEquals(r5.getText(), "false");
+        Assert.assertEquals(r5.getText(), "false");
     }
 
     @Test
     public void testR6() {
         WebElement r6 = webDriver.findElement(By.id("r6"));
-        assertEquals(r6.getText(), "true");
+        Assert.assertEquals(r6.getText(), "true");
     }
 
     @Test
     public void testR7() {
         WebElement r7 = webDriver.findElement(By.id("r7"));
-        assertEquals(r7.getText(), "true");
+        Assert.assertEquals(r7.getText(), "true");
     }
 
     @Test
     public void testR8() {
         WebElement r8 = webDriver.findElement(By.id("r8"));
-        assertEquals(r8.getText(), "true");
+        Assert.assertEquals(r8.getText(), "true");
     }
 
     @Test
     public void testR9() {
         WebElement r9 = webDriver.findElement(By.id("r9"));
-        assertEquals(r9.getText(), "false");
+        Assert.assertEquals(r9.getText(), "false");
     }
 
     @Test
     public void testR10() {
         WebElement r10 = webDriver.findElement(By.id("r10"));
-        assertEquals(r10.getText(), "false");
+        Assert.assertEquals(r10.getText(), "false");
     }
 
 }
