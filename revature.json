@@ -1,0 +1,60 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/SeleniumTest.java",
+      "testCases": [
+        {
+          "methodName": "testR1",
+          "label": "Verify first truthy/falsy result (r1)",
+          "description": "Checks that the element with id 'r1' in TruthyFalsy.html renders the text 'true', confirming the first JavaScript truthy/falsy evaluation."
+        },
+        {
+          "methodName": "testR2",
+          "label": "Verify second truthy/falsy result (r2)",
+          "description": "Checks that the element with id 'r2' displays the text 'false', validating the second truthy/falsy expression result."
+        },
+        {
+          "methodName": "testR3",
+          "label": "Verify third truthy/falsy result (r3)",
+          "description": "Ensures that the element with id 'r3' contains the text 'false', confirming the third logical evaluation outcome."
+        },
+        {
+          "methodName": "testR4",
+          "label": "Verify fourth truthy/falsy result (r4)",
+          "description": "Asserts that the element with id 'r4' shows the text 'true', validating the fourth truthy/falsy condition."
+        },
+        {
+          "methodName": "testR5",
+          "label": "Verify fifth truthy/falsy result (r5)",
+          "description": "Ensures that the element with id 'r5' renders 'false', confirming the fifth JavaScript boolean expression result."
+        },
+        {
+          "methodName": "testR6",
+          "label": "Verify sixth truthy/falsy result (r6)",
+          "description": "Checks that the element with id 'r6' contains the text 'true', validating the sixth truthy/falsy evaluation."
+        },
+        {
+          "methodName": "testR7",
+          "label": "Verify seventh truthy/falsy result (r7)",
+          "description": "Asserts that the element with id 'r7' displays 'true', confirming the seventh logical expression result on the page."
+        },
+        {
+          "methodName": "testR8",
+          "label": "Verify eighth truthy/falsy result (r8)",
+          "description": "Checks that the element with id 'r8' has the text 'true', validating the eighth truthy/falsy condition."
+        },
+        {
+          "methodName": "testR9",
+          "label": "Verify ninth truthy/falsy result (r9)",
+          "description": "Ensures that the element with id 'r9' shows the text 'false', confirming the ninth JavaScript expression evaluation."
+        },
+        {
+          "methodName": "testR10",
+          "label": "Verify tenth truthy/falsy result (r10)",
+          "description": "Asserts that the element with id 'r10' renders 'false', validating the tenth and final truthy/falsy result displayed on the page."
+        }
+      ]
+    }
+  ]
+}
